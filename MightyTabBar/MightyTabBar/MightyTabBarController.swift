@@ -10,19 +10,20 @@ import UIKit
 
 class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MightyTabBarDelegate {
 
-    lazy var mightyTabBar: MightyTabBar = {
+    private lazy var mightyTabBar: MightyTabBar = {
         let mtb = MightyTabBar()
         mtb.delegate = self
+        mtb.bgColor = bgColor
         return mtb
     }()
 
-    let bottomView: UIView = {
+    private lazy var bottomView: UIView = {
         let bv = UIView()
-        bv.backgroundColor = UIColor(displayP3Red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
+        bv.backgroundColor = bgColor
         return bv
     }()
 
-    lazy var collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -34,27 +35,31 @@ class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICo
         return cv
     }()
 
-    let cellId = "cellId"
-    var currentIndex = 0
+    private let cellId = "cellId"
+    private var currentIndex = 0
 
     var viewControllers = [UIViewController]()
+    var tabBarItems: [[String: String]] = [] {
+        didSet {
+            mightyTabBar.tabBarItems = tabBarItems
+        }
+    }
+
+    var bgColor: UIColor = .white {
+        didSet {
+            mightyTabBar.bgColor = bgColor
+        }
+    }
+    var handleColor: UIColor = UIColor(displayP3Red: 149/255, green: 165/255, blue: 166/255, alpha: 0.5)
+    var itemCountInRow: Int = 5 {
+        didSet {
+            mightyTabBar.itemCountInRow = itemCountInRow
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(ViewControllerCell.self, forCellWithReuseIdentifier: cellId)
-
-        let vc01 = ViewController01()
-        let vc02 = ViewController02()
-        let vc03 = ViewController03()
-        let vc04 = ViewController04()
-        let vc05 = ViewController05()
-        let vc06 = ViewController06()
-        let vc07 = ViewController07()
-        let vc08 = ViewController08()
-        let vc09 = ViewController09()
-        let vc10 = ViewController10()
-
-        viewControllers = [vc01, vc02, vc03, vc04, vc05, vc06, vc07, vc08, vc09, vc10]
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -90,6 +95,8 @@ class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICo
         bottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         bottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         bottomView.heightAnchor.constraint(equalToConstant: view.safeAreaInsets.bottom).isActive = true
+
+        mightyTabBar.handleColor = handleColor
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -115,10 +122,6 @@ class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICo
         return 0
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("didSelectItemAt \(indexPath.item)")
-    }
-
     func didSelectTab(index: Int) {
         if currentIndex == index {
             return
@@ -132,11 +135,18 @@ class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICo
         }
     }
 
+    func setBadge(count: Int, index: Int) {
+        let index = IndexPath(item: index, section: 0)
+        if let tabBarItem = mightyTabBar.collectionView.cellForItem(at: index) as? TabBarItem {
+            tabBarItem.badgeCount = count
+        }
+    }
+
 }
 
-class ViewControllerCell: UICollectionViewCell {
+private class ViewControllerCell: UICollectionViewCell {
 
-    var hostedView: UIView? {
+    fileprivate var hostedView: UIView? {
         didSet {
             guard let hostedView = hostedView else { return }
 

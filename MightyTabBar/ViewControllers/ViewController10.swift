@@ -19,6 +19,10 @@ class ViewController10: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("vc10 appeared")
+
+        if let tabBarController = parent as? MightyTabBarController {
+            tabBarController.setBadge(count: 0, index: 9)
+        }
     }
 
 }

@@ -14,11 +14,12 @@ protocol MightyTabBarDelegate: class {
 
 class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    enum TabBarState {
+    private enum TabBarState {
         case expanded, collapsed
     }
 
-    let bgColor = UIColor(displayP3Red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
+    private let handleView = UIView()
+
     weak var delegate: MightyTabBarDelegate?
 
     lazy var collectionView: UICollectionView = {
@@ -32,7 +33,7 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         return cv
     }()
 
-    lazy var draggableView: UIView = {
+    private lazy var draggableView: UIView = {
         let dv = UIView()
         dv.isUserInteractionEnabled = true
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handleDragView(_:)))
@@ -40,8 +41,7 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         dv.addGestureRecognizer(panGesture)
         dv.addGestureRecognizer(tapGesture)
 
-        let handleView = UIView()
-        handleView.backgroundColor = UIColor(displayP3Red: 149/255, green: 165/255, blue: 166/255, alpha: 1)
+        handleView.backgroundColor = handleColor
 
         dv.addSubview(handleView)
         handleView.translatesAutoresizingMaskIntoConstraints = false
@@ -54,32 +54,51 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         return dv
     }()
 
-    let cellId = "cellId"
-    let screenHeight = UIScreen.main.bounds.size.height
-    let maxHeight: CGFloat = 220
-    let minHeight: CGFloat = 120
+    private let cellId = "cellId"
+    private let screenHeight = UIScreen.main.bounds.size.height
+    private var maxHeight: CGFloat = 220
+    private let minHeight: CGFloat = 120
+    private let dragAreaHeight: CGFloat = 20
+    private let animDuration: TimeInterval = 0.2
     let tabItemHeight: CGFloat = 80
-    let dragAreaHeight: CGFloat = 20
-    let animDuration: TimeInterval = 0.2
 
-    var isOpen = false
-    var tabState: TabBarState {
+    private var isOpen = false
+    private var tabState: TabBarState {
         return isOpen ? .collapsed : .expanded
     }
-    var runningAnimations = [UIViewPropertyAnimator]()
-    var animationProgress: CGFloat = 0
-    var tabItems: [[String: Any]] = [
-        ["name": "Home", "image": "home"],
-        ["name": "Explore", "image": "rocket"],
-        ["name": "Camera", "image": "camera"],
-        ["name": "Gift", "image": "gift"],
-        ["name": "Settings", "image": "gear"],
-        ["name": "Award", "image": "gift"],
-        ["name": "Profile", "image": "home"],
-        ["name": "Gear", "image": "gear"],
-        ["name": "Discover", "image": "rocket"],
-        ["name": "Photos", "image": "camera"]
-    ]
+    private var runningAnimations = [UIViewPropertyAnimator]()
+    private var animationProgress: CGFloat = 0
+
+    var tabBarItems: [[String: String]] = [] {
+        didSet {
+            let rowCount = ceil(Double(tabBarItems.count) / Double(itemCountInRow))
+            maxHeight = (CGFloat(rowCount) * tabItemHeight) + 40
+            cvHeightConstraint.constant = CGFloat(rowCount) * tabItemHeight
+        }
+    }
+    var bgColor: UIColor = .white {
+        didSet {
+            backgroundColor = bgColor
+            collectionView.backgroundColor = bgColor
+            draggableView.backgroundColor = bgColor
+        }
+    }
+    var handleColor: UIColor = UIColor(displayP3Red: 149/255, green: 165/255, blue: 166/255, alpha: 1) {
+        didSet {
+            handleView.backgroundColor = handleColor
+        }
+    }
+    var itemCountInRow: Int = 5 {
+        didSet {
+            if itemCountInRow > 5 {
+                itemCountInRow = 5
+            } else if itemCountInRow < 2 {
+                itemCountInRow = 2
+            }
+        }
+    }
+
+    private var cvHeightConstraint: NSLayoutConstraint!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -96,7 +115,8 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         collectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         collectionView.topAnchor.constraint(equalTo: topAnchor, constant: dragAreaHeight).isActive = true
-        collectionView.heightAnchor.constraint(equalToConstant: tabItemHeight * 2).isActive = true
+        cvHeightConstraint = collectionView.heightAnchor.constraint(equalToConstant: tabItemHeight)
+        cvHeightConstraint.isActive = true
 
         addSubview(draggableView)
         draggableView.translatesAutoresizingMaskIntoConstraints = false
@@ -111,23 +131,23 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tabItems.count
+        return tabBarItems.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! TabBarItem
-        let tabItem = tabItems[indexPath.item]
-        if let name = tabItem["name"] as? String, let image = tabItem["image"] as? String {
-            cell.title.text = name
-            cell.title.textColor = .black
-            cell.icon.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
-            cell.tintColor = .black
+        let tabBarItem = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! TabBarItem
+        let item = tabBarItems[indexPath.item]
+        if let name = item["name"], let image = item["image"] {
+            tabBarItem.title.text = name
+            tabBarItem.title.textColor = .black
+            tabBarItem.icon.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+            tabBarItem.tintColor = .black
         }
-        return cell
+        return tabBarItem
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: frame.width / 5, height: 80)
+        return CGSize(width: frame.width / CGFloat(itemCountInRow), height: tabItemHeight)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -150,9 +170,9 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         let initialIndex = sourceIndexPath.item
         let finalIndex = destinationIndexPath.item
 
-        let initialItem = tabItems[initialIndex]
-        tabItems.remove(at: initialIndex)
-        tabItems.insert(initialItem, at: finalIndex)
+        let initialItem = tabBarItems[initialIndex]
+        tabBarItems.remove(at: initialIndex)
+        tabBarItems.insert(initialItem, at: finalIndex)
 
         let firstIndex = IndexPath(item: 0, section: 0)
         collectionView.selectItem(at: firstIndex, animated: false, scrollPosition: [])
@@ -179,7 +199,7 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         }
     }
 
-    func startInteractiveTransition(state: TabBarState) {
+    private func startInteractiveTransition(state: TabBarState) {
         if runningAnimations.isEmpty {
             animateTransition(state: state)
         }
@@ -189,19 +209,19 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         }
     }
 
-    func updateInteractiveTransition(fractionCompleted: CGFloat) {
+    private func updateInteractiveTransition(fractionCompleted: CGFloat) {
         for animator in runningAnimations {
             animator.fractionComplete = fractionCompleted + animationProgress
         }
     }
 
-    func continueInteractiveTransition() {
+    private func continueInteractiveTransition() {
         for animator in runningAnimations {
             animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
         }
     }
 
-    func animateTransition(state: TabBarState) {
+    private func animateTransition(state: TabBarState) {
         if runningAnimations.isEmpty {
             let frameAnimator = UIViewPropertyAnimator(duration: animDuration, curve: .easeInOut) {
                 switch state {
@@ -244,13 +264,13 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
 
 class TabBarItem: UICollectionViewCell {
 
-    let icon: UIImageView = {
+    fileprivate let icon: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "home")?.withRenderingMode(.alwaysTemplate)
         iv.tintColor = .black
         return iv
     }()
-    let title: UILabel = {
+    fileprivate let title: UILabel = {
         let label = UILabel()
         label.text = "Home"
         label.textAlignment = NSTextAlignment.center
@@ -260,7 +280,16 @@ class TabBarItem: UICollectionViewCell {
         label.textColor = .black
         return label
     }()
-
+    private let badgeView: BadgeView = {
+        let bv = BadgeView()
+        return bv
+    }()
+    var badgeCount: Int {
+        didSet {
+            badgeView.title.text = "\(badgeCount)"
+            setupCell()
+        }
+    }
     override var isSelected: Bool {
         didSet {
             icon.tintColor = isSelected ? .red : .black
@@ -275,6 +304,7 @@ class TabBarItem: UICollectionViewCell {
     }
 
     override init(frame: CGRect) {
+        self.badgeCount = 0
         super.init(frame: frame)
         setupCell()
     }
@@ -297,6 +327,53 @@ class TabBarItem: UICollectionViewCell {
         title.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         title.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9).isActive = true
         title.heightAnchor.constraint(equalToConstant: 15).isActive = true
+
+        if badgeCount > 0 {
+            badgeView.title.text = "\(badgeCount)"
+            addSubview(badgeView)
+            badgeView.translatesAutoresizingMaskIntoConstraints = false
+            badgeView.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 15).isActive = true
+            badgeView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -20).isActive = true
+            badgeView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+            badgeView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+            badgeView.layer.cornerRadius = 10
+        } else {
+            badgeView.removeFromSuperview()
+        }
+    }
+
+}
+
+private class BadgeView: UIView {
+
+    fileprivate let title: UILabel = {
+        let label = UILabel()
+        label.text = "1"
+        label.textAlignment = NSTextAlignment.center
+        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.numberOfLines = 1
+        label.lineBreakMode = NSLineBreakMode.byTruncatingTail
+        label.textColor = .white
+        return label
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        clipsToBounds = true
+        backgroundColor = .red
+
+        addSubview(title)
+        title.translatesAutoresizingMaskIntoConstraints = false
+        title.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        title.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        title.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        title.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        title.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        title.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 }
