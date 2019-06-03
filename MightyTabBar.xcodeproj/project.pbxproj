@@ -8,20 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		4896614F22A236F70076BA30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896614E22A236F70076BA30 /* AppDelegate.swift */; };
-		4896615122A236F70076BA30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896615022A236F70076BA30 /* ViewController.swift */; };
-		4896615422A236F70076BA30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4896615222A236F70076BA30 /* Main.storyboard */; };
 		4896615622A236F90076BA30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4896615522A236F90076BA30 /* Assets.xcassets */; };
 		4896615922A236F90076BA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4896615722A236F90076BA30 /* LaunchScreen.storyboard */; };
+		4896616B22A2378F0076BA30 /* ViewController01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896616122A2378E0076BA30 /* ViewController01.swift */; };
+		4896616C22A2378F0076BA30 /* ViewController02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896616222A2378E0076BA30 /* ViewController02.swift */; };
+		4896616D22A2378F0076BA30 /* ViewController06.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896616322A2378E0076BA30 /* ViewController06.swift */; };
+		4896616E22A2378F0076BA30 /* ViewController08.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896616422A2378E0076BA30 /* ViewController08.swift */; };
+		4896616F22A2378F0076BA30 /* ViewController05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896616522A2378E0076BA30 /* ViewController05.swift */; };
+		4896617022A2378F0076BA30 /* ViewController03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896616622A2378E0076BA30 /* ViewController03.swift */; };
+		4896617122A2378F0076BA30 /* ViewController04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896616722A2378E0076BA30 /* ViewController04.swift */; };
+		4896617222A2378F0076BA30 /* ViewController07.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896616822A2378E0076BA30 /* ViewController07.swift */; };
+		4896617322A2378F0076BA30 /* ViewController09.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896616922A2378E0076BA30 /* ViewController09.swift */; };
+		4896617422A2378F0076BA30 /* ViewController10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896616A22A2378E0076BA30 /* ViewController10.swift */; };
+		4896617622A238B90076BA30 /* MightyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896617522A238B90076BA30 /* MightyTabBar.swift */; };
+		4896617822A239460076BA30 /* MightyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4896617722A239460076BA30 /* MightyTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4896614B22A236F70076BA30 /* DynamicTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4896614B22A236F70076BA30 /* MightyTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MightyTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4896614E22A236F70076BA30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4896615022A236F70076BA30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4896615322A236F70076BA30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4896615522A236F90076BA30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4896615822A236F90076BA30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4896615A22A236F90076BA30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4896616122A2378E0076BA30 /* ViewController01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController01.swift; sourceTree = "<group>"; };
+		4896616222A2378E0076BA30 /* ViewController02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController02.swift; sourceTree = "<group>"; };
+		4896616322A2378E0076BA30 /* ViewController06.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController06.swift; sourceTree = "<group>"; };
+		4896616422A2378E0076BA30 /* ViewController08.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController08.swift; sourceTree = "<group>"; };
+		4896616522A2378E0076BA30 /* ViewController05.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController05.swift; sourceTree = "<group>"; };
+		4896616622A2378E0076BA30 /* ViewController03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController03.swift; sourceTree = "<group>"; };
+		4896616722A2378E0076BA30 /* ViewController04.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController04.swift; sourceTree = "<group>"; };
+		4896616822A2378E0076BA30 /* ViewController07.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController07.swift; sourceTree = "<group>"; };
+		4896616922A2378E0076BA30 /* ViewController09.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController09.swift; sourceTree = "<group>"; };
+		4896616A22A2378E0076BA30 /* ViewController10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController10.swift; sourceTree = "<group>"; };
+		4896617522A238B90076BA30 /* MightyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MightyTabBar.swift; sourceTree = "<group>"; };
+		4896617722A239460076BA30 /* MightyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MightyTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,10 +55,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4836B65422A4E1E000748AD1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4896616122A2378E0076BA30 /* ViewController01.swift */,
+				4896616222A2378E0076BA30 /* ViewController02.swift */,
+				4896616622A2378E0076BA30 /* ViewController03.swift */,
+				4896616722A2378E0076BA30 /* ViewController04.swift */,
+				4896616522A2378E0076BA30 /* ViewController05.swift */,
+				4896616322A2378E0076BA30 /* ViewController06.swift */,
+				4896616822A2378E0076BA30 /* ViewController07.swift */,
+				4896616422A2378E0076BA30 /* ViewController08.swift */,
+				4896616922A2378E0076BA30 /* ViewController09.swift */,
+				4896616A22A2378E0076BA30 /* ViewController10.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		4896614222A236F70076BA30 = {
 			isa = PBXGroup;
 			children = (
-				4896614D22A236F70076BA30 /* DynamicTabBar */,
+				4896614D22A236F70076BA30 /* MightyTabBar */,
 				4896614C22A236F70076BA30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +83,39 @@
 		4896614C22A236F70076BA30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4896614B22A236F70076BA30 /* DynamicTabBar.app */,
+				4896614B22A236F70076BA30 /* MightyTabBar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4896614D22A236F70076BA30 /* DynamicTabBar */ = {
+		4896614D22A236F70076BA30 /* MightyTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				4896616022A2370D0076BA30 /* MightyTabBar */,
 				4896614E22A236F70076BA30 /* AppDelegate.swift */,
-				4896615022A236F70076BA30 /* ViewController.swift */,
-				4896615222A236F70076BA30 /* Main.storyboard */,
+				4836B65422A4E1E000748AD1 /* ViewControllers */,
 				4896615522A236F90076BA30 /* Assets.xcassets */,
 				4896615722A236F90076BA30 /* LaunchScreen.storyboard */,
 				4896615A22A236F90076BA30 /* Info.plist */,
 			);
-			path = DynamicTabBar;
+			path = MightyTabBar;
+			sourceTree = "<group>";
+		};
+		4896616022A2370D0076BA30 /* MightyTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4896617522A238B90076BA30 /* MightyTabBar.swift */,
+				4896617722A239460076BA30 /* MightyTabBarController.swift */,
+			);
+			path = MightyTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4896614A22A236F70076BA30 /* DynamicTabBar */ = {
+		4896614A22A236F70076BA30 /* MightyTabBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4896615D22A236F90076BA30 /* Build configuration list for PBXNativeTarget "DynamicTabBar" */;
+			buildConfigurationList = 4896615D22A236F90076BA30 /* Build configuration list for PBXNativeTarget "MightyTabBar" */;
 			buildPhases = (
 				4896614722A236F70076BA30 /* Sources */,
 				4896614822A236F70076BA30 /* Frameworks */,
@@ -79,9 +125,9 @@
 			);
 			dependencies = (
 			);
-			name = DynamicTabBar;
+			name = MightyTabBar;
 			productName = DynamicTabBar;
-			productReference = 4896614B22A236F70076BA30 /* DynamicTabBar.app */;
+			productReference = 4896614B22A236F70076BA30 /* MightyTabBar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +145,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4896614622A236F70076BA30 /* Build configuration list for PBXProject "DynamicTabBar" */;
+			buildConfigurationList = 4896614622A236F70076BA30 /* Build configuration list for PBXProject "MightyTabBar" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +158,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4896614A22A236F70076BA30 /* DynamicTabBar */,
+				4896614A22A236F70076BA30 /* MightyTabBar */,
 			);
 		};
 /* End PBXProject section */
@@ -124,7 +170,6 @@
 			files = (
 				4896615922A236F90076BA30 /* LaunchScreen.storyboard in Resources */,
 				4896615622A236F90076BA30 /* Assets.xcassets in Resources */,
-				4896615422A236F70076BA30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +180,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4896615122A236F70076BA30 /* ViewController.swift in Sources */,
+				4896616F22A2378F0076BA30 /* ViewController05.swift in Sources */,
+				4896616E22A2378F0076BA30 /* ViewController08.swift in Sources */,
+				4896616D22A2378F0076BA30 /* ViewController06.swift in Sources */,
+				4896617322A2378F0076BA30 /* ViewController09.swift in Sources */,
+				4896617822A239460076BA30 /* MightyTabBarController.swift in Sources */,
+				4896617022A2378F0076BA30 /* ViewController03.swift in Sources */,
+				4896617122A2378F0076BA30 /* ViewController04.swift in Sources */,
+				4896616B22A2378F0076BA30 /* ViewController01.swift in Sources */,
+				4896617622A238B90076BA30 /* MightyTabBar.swift in Sources */,
+				4896616C22A2378F0076BA30 /* ViewController02.swift in Sources */,
+				4896617422A2378F0076BA30 /* ViewController10.swift in Sources */,
 				4896614F22A236F70076BA30 /* AppDelegate.swift in Sources */,
+				4896617222A2378F0076BA30 /* ViewController07.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4896615222A236F70076BA30 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4896615322A236F70076BA30 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4896615722A236F90076BA30 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,12 +332,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QKNVPTRYEV;
-				INFOPLIST_FILE = DynamicTabBar/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MightyTabBar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.timshim.DynamicTabBar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timshim.MightyTabBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,12 +350,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QKNVPTRYEV;
-				INFOPLIST_FILE = DynamicTabBar/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MightyTabBar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.timshim.DynamicTabBar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timshim.MightyTabBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,7 +365,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4896614622A236F70076BA30 /* Build configuration list for PBXProject "DynamicTabBar" */ = {
+		4896614622A236F70076BA30 /* Build configuration list for PBXProject "MightyTabBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4896615B22A236F90076BA30 /* Debug */,
@@ -326,7 +374,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4896615D22A236F90076BA30 /* Build configuration list for PBXNativeTarget "DynamicTabBar" */ = {
+		4896615D22A236F90076BA30 /* Build configuration list for PBXNativeTarget "MightyTabBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4896615E22A236F90076BA30 /* Debug */,
