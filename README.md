@@ -58,14 +58,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Requirements
 
-* Xcode 8 or later
-* iOS 8.0 or later
-* ARC
-* Swift 3 or later
+* Xcode 10 or later
+* iOS 10.0 or later
+* Swift 4 or later
 
-## Demo
+### Demo
 
-Run `pod install` in the MightTabBarExample folder. Open the MightyTabBarExample workspace and build.
+Run `pod install` in the MightTabBarExample folder. Open the MightyTabBarExample workspace. Build and run.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
