@@ -14,8 +14,7 @@
     <img src="logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h2 align="center">MightyTabBar</h2>
-
+  <h3 align="center">MightyTabBar</h3>
   <p align="center">
     How tab bars should work.
   </p>
