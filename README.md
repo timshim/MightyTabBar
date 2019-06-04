@@ -66,6 +66,26 @@ To get a local copy up and running follow these simple example steps.
 
 Run `pod install` in the MightTabBarExample folder. Open the MightyTabBarExample workspace. Build and run.
 
+## Installation
+
+### CocoaPods
+
+``` 
+pod MightyTabBar
+```
+
+### Carthage
+
+```
+github "timshim/MightyTabBar"
+```
+
+### Manually
+
+```
+git clone https://github.com/timshim/MightyTabBar.git
+```
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
