@@ -1,5 +1,9 @@
 <!-- PROJECT SHIELDS -->
 [![Build Status][build-shield]]()
+[![CocoaPods](https://img.shields.io/cocoapods/v/ESTabBarController-swift.svg)](http://cocoapods.org/pods/MightyTabBar)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift v4](https://img.shields.io/badge/Swift-4-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/timshim/MightyTabBar.svg?style=social)](https://twitter.com/timshim)
 [![Contributors][contributors-shield]]()
 [![MIT License][license-shield]](https://github.com/timshim/MightyTabBar/blob/master/LICENSE)
 
@@ -13,16 +17,7 @@
   <h3 align="center">MightyTabBar</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    MightyTabBar is a customizable TabBar that also doubles as a menu drawer. Instead of a hamburger menu, MightyTabBar allows your app to have up to 30 tabbar items, all positioned within the thumb zone and easily accessible via swipe up.
   </p>
 </p>
 
@@ -119,8 +114,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Tim Shim - [@timshim](https://twitter.com/timshim) - timshim@gmail.com
-
-Project Link: [https://github.com/timshim/MightyTabBar](https://github.com/timshim/MightyTabBar)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
