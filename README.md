@@ -14,11 +14,8 @@
     <img src="logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">MightyTabBar</h3>
+  <h1 align="center">MightyTabBar</h1>
 
-  <p align="center">
-    MightyTabBar is a customizable TabBar that also doubles as a menu drawer. Instead of a hamburger menu, MightyTabBar allows your app to have up to 30 tabbar items, all positioned within the thumb zone and easily accessible via swipe up.
-  </p>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -40,7 +37,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+MightyTabBar is a customizable TabBar that also doubles as a menu drawer. Instead of a hamburger menu, MightyTabBar allows your app to have up to 30 tabbar items, all positioned within the thumb zone and easily accessible via swipe up.
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
