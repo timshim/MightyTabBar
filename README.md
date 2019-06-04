@@ -3,9 +3,9 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/ESTabBarController-swift.svg)](http://cocoapods.org/pods/MightyTabBar)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift v4](https://img.shields.io/badge/Swift-4-orange.svg?style=flat)](https://developer.apple.com/swift/)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/timshim/MightyTabBar.svg?style=social)](https://twitter.com/timshim)
 [![Contributors][contributors-shield]]()
 [![MIT License][license-shield]](https://github.com/timshim/MightyTabBar/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/timshim/MightyTabBar.svg?style=social)](https://twitter.com/timshim)
 
 <!-- PROJECT LOGO -->
 <br />
