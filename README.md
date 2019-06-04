@@ -24,11 +24,10 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
+* [Description](#about-the-project)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
+  * [Requirements](#prerequisites)
+  * [Demo](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
@@ -36,7 +35,7 @@
 * [Acknowledgements](#acknowledgements)
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Description
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -51,41 +50,22 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Requirements
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+* Xcode 8 or later
+* iOS 8.0 or later
+* ARC
+* Swift 3 or later
 
-### Installation
+## Demo
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-```sh
-git clone https:://github.com/your_username_/Project-Name.git
-```
-3. Install NPM packages
-```sh
-npm install
-```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
+Run `pod install` in the MightTabBarExample folder. Open the MightyTabBarExample workspace and build.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
