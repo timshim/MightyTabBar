@@ -24,10 +24,11 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [Description](#about-the-project)
+* [Description](#description)
 * [Getting Started](#getting-started)
-  * [Requirements](#prerequisites)
-  * [Demo](#installation)
+  * [Requirements](#requirements)
+  * [Demo](#demo)
+* [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
