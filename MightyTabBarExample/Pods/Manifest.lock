@@ -1,0 +1,16 @@
+PODS:
+  - MightyTabBar (1.0.0)
+
+DEPENDENCIES:
+  - MightyTabBar (from `../../MightyTabBar`)
+
+EXTERNAL SOURCES:
+  MightyTabBar:
+    :path: "../../MightyTabBar"
+
+SPEC CHECKSUMS:
+  MightyTabBar: 0e09d624e6d2379dac5c8448ef2884eddcd81b6a
+
+PODFILE CHECKSUM: c71bf29f5d219b2ecef1ba7e1350edf50c57e040
+
+COCOAPODS: 1.7.1

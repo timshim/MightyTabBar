@@ -20,6 +20,7 @@
 		4836B6B622A668A100748AD1 /* ViewController09.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836B6AC22A668A100748AD1 /* ViewController09.swift */; };
 		4836B6B722A668A100748AD1 /* ViewController10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836B6AD22A668A100748AD1 /* ViewController10.swift */; };
 		4836B6B822A668A100748AD1 /* ViewController08.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836B6AE22A668A100748AD1 /* ViewController08.swift */; };
+		774FFEBAFFD8A5127EAA1AEB /* Pods_MightyTabBarExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A8330AF7FEBAC4F8CD0F3D /* Pods_MightyTabBarExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27E4C636BC22A29E986BD16D /* Pods-MightyTabBarExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MightyTabBarExample.release.xcconfig"; path = "Target Support Files/Pods-MightyTabBarExample/Pods-MightyTabBarExample.release.xcconfig"; sourceTree = "<group>"; };
+		2B01DCD46CABA888BBAB4112 /* Pods-MightyTabBarExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MightyTabBarExample.debug.xcconfig"; path = "Target Support Files/Pods-MightyTabBarExample/Pods-MightyTabBarExample.debug.xcconfig"; sourceTree = "<group>"; };
 		4836B68222A6670200748AD1 /* MightyTabBarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MightyTabBarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4836B68522A6670200748AD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4836B68C22A6670600748AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		4836B6AC22A668A100748AD1 /* ViewController09.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController09.swift; sourceTree = "<group>"; };
 		4836B6AD22A668A100748AD1 /* ViewController10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController10.swift; sourceTree = "<group>"; };
 		4836B6AE22A668A100748AD1 /* ViewController08.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController08.swift; sourceTree = "<group>"; };
+		76A8330AF7FEBAC4F8CD0F3D /* Pods_MightyTabBarExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MightyTabBarExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				774FFEBAFFD8A5127EAA1AEB /* Pods_MightyTabBarExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +74,8 @@
 			children = (
 				4836B68422A6670200748AD1 /* MightyTabBarExample */,
 				4836B68322A6670200748AD1 /* Products */,
+				A6E8A2933B0001D5B5FFFF12 /* Pods */,
+				D4DC372E6A1139E6E16405FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +116,24 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		A6E8A2933B0001D5B5FFFF12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B01DCD46CABA888BBAB4112 /* Pods-MightyTabBarExample.debug.xcconfig */,
+				27E4C636BC22A29E986BD16D /* Pods-MightyTabBarExample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D4DC372E6A1139E6E16405FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76A8330AF7FEBAC4F8CD0F3D /* Pods_MightyTabBarExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,10 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4836B69422A6670600748AD1 /* Build configuration list for PBXNativeTarget "MightyTabBarExample" */;
 			buildPhases = (
+				EE1391D27DB4FDF68FC3E7D1 /* [CP] Check Pods Manifest.lock */,
 				4836B67E22A6670200748AD1 /* Sources */,
 				4836B67F22A6670200748AD1 /* Frameworks */,
 				4836B68022A6670200748AD1 /* Resources */,
 				4836B6F922A66C5D00748AD1 /* Embed Frameworks */,
+				01FB8ABC15B83F65B4D9AE10 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +201,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01FB8ABC15B83F65B4D9AE10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MightyTabBarExample/Pods-MightyTabBarExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MightyTabBarExample/Pods-MightyTabBarExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MightyTabBarExample/Pods-MightyTabBarExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE1391D27DB4FDF68FC3E7D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MightyTabBarExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4836B67E22A6670200748AD1 /* Sources */ = {
@@ -326,6 +395,7 @@
 		};
 		4836B69522A6670600748AD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B01DCD46CABA888BBAB4112 /* Pods-MightyTabBarExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -345,6 +415,7 @@
 		};
 		4836B69622A6670600748AD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27E4C636BC22A29E986BD16D /* Pods-MightyTabBarExample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

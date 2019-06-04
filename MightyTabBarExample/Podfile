@@ -1,0 +1,8 @@
+platform :ios, '12.0'
+
+target 'MightyTabBarExample' do
+  use_frameworks!
+
+  pod 'MightyTabBar', :path => '../../MightyTabBar'
+
+end

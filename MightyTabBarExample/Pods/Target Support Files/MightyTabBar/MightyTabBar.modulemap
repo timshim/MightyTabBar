@@ -1,0 +1,6 @@
+framework module MightyTabBar {
+  umbrella header "MightyTabBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

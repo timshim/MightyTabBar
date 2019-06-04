@@ -1,0 +1,6 @@
+framework module Pods_MightyTabBarExample {
+  umbrella header "Pods-MightyTabBarExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
