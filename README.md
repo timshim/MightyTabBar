@@ -39,7 +39,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-MightyTabBar is a customizable TabBar that also doubles as a menu drawer. Instead of a hamburger menu, MightyTabBar allows your app to have up to 30 tabbar items, all positioned within the thumb zone and easily accessible via swipe up.
+MightyTabBar is a customizable TabBar that doubles as a menu drawer. Instead of being limited to 5 tab bar items, MightyTabBar allows your app to have up to 30 tabbar items, all positioned within the thumb zone and easily accessible via swipe up.
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
