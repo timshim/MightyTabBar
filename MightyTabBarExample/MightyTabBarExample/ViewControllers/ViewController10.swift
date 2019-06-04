@@ -7,21 +7,22 @@
 //
 
 import UIKit
+import MightyTabBar
 
-class ViewController01: UIViewController {
+class ViewController10: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Turquoise
-        view.backgroundColor = UIColor(displayP3Red: 26/255, green: 188/255, blue: 156/255, alpha: 1)
+        // Midnight Blue
+        view.backgroundColor = UIColor(displayP3Red: 44/255, green: 62/255, blue: 80/255, alpha: 1)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("vc01 appeared")
+        print("vc10 appeared")
 
         if let tabBarController = parent as? MightyTabBarController {
-            tabBarController.setBadge(count: 1, index: 9)
+            tabBarController.setBadge(count: 0, index: 9)
         }
     }
 

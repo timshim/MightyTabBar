@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MightyTabBarDelegate {
+public class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MightyTabBarDelegate {
 
     private lazy var mightyTabBar: MightyTabBar = {
         let mtb = MightyTabBar()
@@ -38,38 +38,38 @@ class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICo
     private let cellId = "cellId"
     private var currentIndex = 0
 
-    var viewControllers = [UIViewController]()
-    var tabBarItems: [[String: String]] = [] {
+    public var viewControllers = [UIViewController]()
+    public var tabBarItems: [[String: String]] = [] {
         didSet {
             mightyTabBar.tabBarItems = tabBarItems
         }
     }
 
-    var bgColor: UIColor = .white {
+    public var bgColor: UIColor = .white {
         didSet {
             mightyTabBar.bgColor = bgColor
         }
     }
-    var handleColor: UIColor = UIColor(displayP3Red: 149/255, green: 165/255, blue: 166/255, alpha: 0.5)
-    var itemCountInRow: Int = 5 {
+    public var handleColor: UIColor = UIColor(displayP3Red: 149/255, green: 165/255, blue: 166/255, alpha: 0.5)
+    public var itemCountInRow: Int = 5 {
         didSet {
             mightyTabBar.itemCountInRow = itemCountInRow
         }
     }
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(ViewControllerCell.self, forCellWithReuseIdentifier: cellId)
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         let initialTabIndex = IndexPath(item: 0, section: 0)
         mightyTabBar.collectionView.selectItem(at: initialTabIndex, animated: false, scrollPosition: [])
     }
 
-    override func viewDidLayoutSubviews() {
+    override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupMightyTabBar()
     }
@@ -99,11 +99,11 @@ class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICo
         mightyTabBar.handleColor = handleColor
     }
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewControllers.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ViewControllerCell
 
         let vc = viewControllers[indexPath.item]
@@ -114,11 +114,11 @@ class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICo
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: view.frame.height)
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
 
@@ -135,7 +135,7 @@ class MightyTabBarController: UIViewController, UICollectionViewDataSource, UICo
         }
     }
 
-    func setBadge(count: Int, index: Int) {
+    public func setBadge(count: Int, index: Int) {
         let index = IndexPath(item: index, section: 0)
         if let tabBarItem = mightyTabBar.collectionView.cellForItem(at: index) as? TabBarItem {
             tabBarItem.badgeCount = count
