@@ -1,6 +1,6 @@
 <!-- PROJECT SHIELDS -->
 [![Build Status][build-shield]]()
-[![CocoaPods](https://img.shields.io/cocoapods/v/ESTabBarController-swift.svg)](http://cocoapods.org/pods/MightyTabBar)
+[![CocoaPods](https://img.shields.io/cocoapods/v/MightyTabBar.svg)](https://cocoapods.org/pods/MightyTabBar)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift v4](https://img.shields.io/badge/Swift-4-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Contributors][contributors-shield]]()
