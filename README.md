@@ -23,12 +23,14 @@ MightyTabBar is a simple solution to this. It uses a UI element which we are all
 
 Some ideas for the future of MightyTabBar:
 * Allow drag and drop to reposition tab bar items
+* Indicators for selected tab bar items below the fold
+* Better iPad support
+* Better horizontal layout support
 * Testing! 😅
 * Refactor to use SwiftUI
 
 As always, if you like where this project is going, please feel free to suggest new features and maybe even contribute if you can!
 
-<br />
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -47,7 +49,7 @@ As always, if you like where this project is going, please feel free to suggest 
 <!-- ABOUT THE PROJECT -->
 ## Screenshots
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[screen01] [screen02]
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -165,3 +167,5 @@ Tim Shim - [@timshim](https://twitter.com/timshim) - timshim@gmail.com
 [license-shield]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [license-url]: https://choosealicense.com/licenses/mit
 [product-screenshot]: https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/screenshot.png
+[screen01]: https://raw.githubusercontent.com/timshim/MightyTabBar/master/screen-01.gif
+[screen02]: https://raw.githubusercontent.com/timshim/MightyTabBar/master/screen-02.gif

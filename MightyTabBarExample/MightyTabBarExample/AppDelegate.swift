@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let tabBarController = MightyTabBarController()
 
-        tabBarController.itemCountInRow = 4
+        tabBarController.itemCountInRow = 5
         tabBarController.bgColor = .white
         tabBarController.handleColor = UIColor(displayP3Red: 149/255, green: 165/255, blue: 166/255, alpha: 0.5)
 
