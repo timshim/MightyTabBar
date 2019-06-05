@@ -49,7 +49,7 @@ As always, if you like where this project is going, please feel free to suggest 
 <!-- ABOUT THE PROJECT -->
 ## Screenshots
 
-[screen01] [screen02]
+[![Product Name Screen Shot][screen01]] [![Product Name Screen Shot][screen02]]
 
 <!-- GETTING STARTED -->
 ## Getting Started
