@@ -13,29 +13,7 @@
   <a href="https://github.com/timshim/MightyTabBar">
     <img src="logo.png" alt="Logo" width="300" height="180">
   </a>
-  <p align="center">
-    How tab bars should work.
-  </p>
 </p>
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [Description](#description)
-* [Getting Started](#getting-started)
-  * [Requirements](#requirements)
-  * [Demo](#demo)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
-
-<!-- ABOUT THE PROJECT -->
-## Description
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 MightyTabBar is a customizable tab bar that doubles as a menu drawer. Instead of being limited to 5 tab bar items, MightyTabBar allows your app to have up to 30 tab bar items, all positioned within the thumb zone and easily accessible via swipe up.
 
@@ -47,6 +25,25 @@ Here's why:
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue with the tag.
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+* [Screenshots](#screenshots)
+* [Getting Started](#getting-started)
+  * [Requirements](#requirements)
+  * [Demo](#demo)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
+<!-- ABOUT THE PROJECT -->
+## Screenshots
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 <!-- GETTING STARTED -->
 ## Getting Started
