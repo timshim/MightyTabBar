@@ -11,10 +11,8 @@
 <br />
 <p align="center">
   <a href="https://github.com/timshim/MightyTabBar">
-    <img src="logo.png" alt="Logo" width="80" height="80">
+    <img src="logo.png" alt="Logo" width="300" height="180">
   </a>
-
-  <h3 align="center">MightyTabBar</h3>
   <p align="center">
     How tab bars should work.
   </p>
