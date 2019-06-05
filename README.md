@@ -86,9 +86,49 @@ git clone https://github.com/timshim/MightyTabBar.git
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This example initializes MightyTabBar in didFinishLaunching method in AppDelegate:
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+```
+window = UIWindow(frame: UIScreen.main.bounds)
+
+// Initialize MightyTabBar
+let tabBarController = MightyTabBarController()
+
+// MightyTabBar configuration
+tabBarController.itemCountInRow = 4
+tabBarController.bgColor = .white
+tabBarController.handleColor = UIColor(displayP3Red: 149/255, green: 165/255, blue: 166/255, alpha: 0.5)
+
+// Add the tab bar items as an array of dictionary with keys "name" and "image"
+tabBarController.tabBarItems = [
+    ["name": "Home", "image": "home"],
+    ["name": "Explore", "image": "rocket"],
+    ["name": "Camera", "image": "camera"],
+    ["name": "Gift", "image": "gift"],
+    ["name": "Settings", "image": "gear"],
+    ["name": "Award", "image": "gift"],
+    ["name": "Profile", "image": "home"],
+    ["name": "Gear", "image": "gear"],
+    ["name": "Discover", "image": "rocket"],
+    ["name": "Photos", "image": "camera"]
+]
+
+// Add the ViewControllers for each item
+let vc01 = ViewController01()
+let vc02 = ViewController02()
+let vc03 = ViewController03()
+let vc04 = ViewController04()
+let vc05 = ViewController05()
+let vc06 = ViewController06()
+let vc07 = ViewController07()
+let vc08 = ViewController08()
+let vc09 = ViewController09()
+let vc10 = ViewController10()
+tabBarController.viewControllers = [vc01, vc02, vc03, vc04, vc05, vc06, vc07, vc08, vc09, vc10]
+
+window?.rootViewController = tabBarController
+window?.makeKeyAndVisible()
+```
 
 <!-- CONTRIBUTING -->
 ## Contributing
