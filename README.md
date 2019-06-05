@@ -23,7 +23,7 @@ MightyTabBar is a simple solution to this. It uses a UI element which we are all
 
 Some ideas for the future of MightyTabBar:
 * Allow drag and drop to reposition tab bar items
-* Testing!
+* Testing! 😅
 * Refactor to use SwiftUI
 
 As always, if you like where this project is going, please feel free to suggest new features and maybe even contribute if you can!
