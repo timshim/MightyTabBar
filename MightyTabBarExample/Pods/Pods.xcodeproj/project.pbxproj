@@ -38,18 +38,18 @@
 		22A509BE3A70F84DDF3B2E2DF972AF52 /* MightyTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MightyTabBarController.swift; path = MightyTabBar/MightyTabBarController.swift; sourceTree = "<group>"; };
 		22B16062CD1B4489595F3B9C76652A4E /* MightyTabBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MightyTabBar-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		48DCA68B3DA2EA9A94ADEEDFBA316E15 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		48DCA68B3DA2EA9A94ADEEDFBA316E15 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5BFEC1498E24EA04FF1BBB92F162788D /* Pods-MightyTabBarExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MightyTabBarExample-Info.plist"; sourceTree = "<group>"; };
 		62FA7C1A59D25B693B0FAFED4F745832 /* Pods-MightyTabBarExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MightyTabBarExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		71DE58DEAB8922DB5401CD7FA07DC4C8 /* Pods-MightyTabBarExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MightyTabBarExample-dummy.m"; sourceTree = "<group>"; };
 		77107ADC4650B82DEDF22C7B5462A86C /* Pods-MightyTabBarExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MightyTabBarExample-frameworks.sh"; sourceTree = "<group>"; };
 		7BC76B2656271A10440E1511EE56E409 /* Pods-MightyTabBarExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MightyTabBarExample.debug.xcconfig"; sourceTree = "<group>"; };
 		7C589D5C6CD4F7E9D2022FD13E6FC716 /* MightyTabBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MightyTabBar.xcconfig; sourceTree = "<group>"; };
-		7F691DABC69C3954C3191339C9830CE7 /* MightyTabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MightyTabBar.framework; path = MightyTabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7F691DABC69C3954C3191339C9830CE7 /* MightyTabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MightyTabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C512962DE1E1C37C869753A46236399C /* MightyTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MightyTabBar.swift; path = MightyTabBar/MightyTabBar.swift; sourceTree = "<group>"; };
-		D2891CDB545F17988E0DDDDE672D5457 /* Pods_MightyTabBarExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MightyTabBarExample.framework; path = "Pods-MightyTabBarExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DED73D06EBC163F29E7E101074FD014D /* MightyTabBar.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MightyTabBar.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D2891CDB545F17988E0DDDDE672D5457 /* Pods_MightyTabBarExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MightyTabBarExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED73D06EBC163F29E7E101074FD014D /* MightyTabBar.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MightyTabBar.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E546CB34182F6940D06F9AD3D3D76AC5 /* Pods-MightyTabBarExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MightyTabBarExample.modulemap"; sourceTree = "<group>"; };
 		F2573D66D2259EE5F671A10FBA977B40 /* MightyTabBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MightyTabBar-dummy.m"; sourceTree = "<group>"; };
 		FCC2B06F02DAA71990308D724E076A10 /* MightyTabBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MightyTabBar-umbrella.h"; sourceTree = "<group>"; };
@@ -248,6 +248,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					0C7B08CA9526C14DBAFFECC8E0CDF918 = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
