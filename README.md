@@ -15,16 +15,18 @@
   </a>
 </p>
 
-MightyTabBar is a customizable tab bar that doubles as a menu drawer. Instead of being limited to 5 tab bar items, MightyTabBar allows your app to have up to 30 tab bar items, all positioned within the thumb zone and easily accessible via swipe up.
+MightyTabBar is a customizable tab bar that doubles as a menu drawer. Instead of being limited to 5 tab bar items, MightyTabBar allows your app to have many more tab bar items, all positioned within the thumb zone and easily accessible via swipe up.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+The original tab bar has always been one of the best UI controls for navigation. It's simple, clear and easy to reach on a mobile device. However, one of the main issues with it is the limited space it affords. The current solution uses a 'More...' tab item to reveal a list of additional menu items, often on another screen. Another solution has been the dreaded hamburger menu, of which there have been [many](https://uxplanet.org/the-ultimate-guide-to-the-hamburger-menu-and-its-alternatives-e2da8dc7f1db), [many](https://medium.muz.li/3-good-reason-why-you-might-want-to-remove-that-hamburger-menu-from-your-product-69b9499ba7e2), [many](https://medium.com/search?q=hamburger%20menu) articles written about.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue with the tag.
+MightyTabBar is a simple solution to this. It uses a UI element which we are all familliar with (the tab bar) and combines it with another UI element we've probably come across before - the card or drawer UI. Drawers are used in apps like Music, Maps and Uber to display more information about an activity in the main view. Combining the tab bar and drawer allows MightyTabBar to have the best of both worlds - a simple, familliar navigation control which can be expanded to show additional tab bar items.
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+Some ideas for the future of MightyTabBar:
+* Allow drag and drop to reposition tab bar items
+* Testing!
+* Refactor to use SwiftUI
+
+As always, if you like where this project is going, please feel free to suggest new features and maybe even contribute if you can!
 
 <br />
 
@@ -50,8 +52,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Follow the instructions below to get started.
 
 ### Requirements
 
@@ -95,9 +96,9 @@ window = UIWindow(frame: UIScreen.main.bounds)
 let tabBarController = MightyTabBarController()
 
 // MightyTabBar configuration
-tabBarController.itemCountInRow = 4
-tabBarController.bgColor = .white
-tabBarController.handleColor = UIColor(displayP3Red: 149/255, green: 165/255, blue: 166/255, alpha: 0.5)
+tabBarController.itemCountInRow = 4 // Number of tab bar items on each row
+tabBarController.bgColor = .white // Background color of the tab bar
+tabBarController.handleColor = UIColor(displayP3Red: 149/255, green: 165/255, blue: 166/255, alpha: 0.5) // Color of the drag handle
 
 // Add the tab bar items as an array of dictionary with keys "name" and "image"
 tabBarController.tabBarItems = [
