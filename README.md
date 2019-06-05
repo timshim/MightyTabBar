@@ -24,6 +24,7 @@ MightyTabBar is a simple solution to this. It uses a UI element which we are all
 Some ideas for the future of MightyTabBar:
 * Allow drag and drop to reposition tab bar items
 * Indicators for selected tab bar items below the fold
+* Support UIVisualEffectView for the background
 * Better iPad support
 * Better horizontal layout support
 * Testing! 😅
