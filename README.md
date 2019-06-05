@@ -29,7 +29,7 @@ Some ideas for the future of MightyTabBar:
 * Testing! 😅
 * Refactor to use SwiftUI
 
-As always, if you like where this project is going, please feel free to suggest new features and maybe even contribute if you can!
+As always, if you like where this project is going, please feel free to suggest new features, fixes, improvements and maybe even contribute if you can!
 
 
 <!-- TABLE OF CONTENTS -->
