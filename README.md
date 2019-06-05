@@ -101,6 +101,8 @@ let tabBarController = MightyTabBarController()
 tabBarController.itemCountInRow = 4 // Number of tab bar items on each row
 tabBarController.bgColor = .white // Background color of the tab bar
 tabBarController.handleColor = UIColor(displayP3Red: 149/255, green: 165/255, blue: 166/255, alpha: 0.5) // Color of the drag handle
+tabBarController.selectedColor = .red // Set highlighted color
+tabBarController.deselectedColor = .black // Set normal color
 
 // Add the tab bar items as an array of dictionary with keys "name" and "image"
 tabBarController.tabBarItems = [
