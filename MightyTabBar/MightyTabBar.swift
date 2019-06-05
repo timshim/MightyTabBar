@@ -97,6 +97,8 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
             }
         }
     }
+    var selectedColor: UIColor = .red
+    var deselectedColor: UIColor = .black
 
     private var cvHeightConstraint: NSLayoutConstraint!
 
@@ -139,9 +141,11 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         let item = tabBarItems[indexPath.item]
         if let name = item["name"], let image = item["image"] {
             tabBarItem.title.text = name
-            tabBarItem.title.textColor = .black
+            tabBarItem.title.textColor = deselectedColor
             tabBarItem.icon.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
-            tabBarItem.tintColor = .black
+            tabBarItem.tintColor = deselectedColor
+            tabBarItem.selectedColor = selectedColor
+            tabBarItem.deselectedColor = deselectedColor
         }
         return tabBarItem
     }
@@ -290,16 +294,22 @@ class TabBarItem: UICollectionViewCell {
             setupCell()
         }
     }
+    var selectedColor: UIColor = .red
+    var deselectedColor: UIColor = .black {
+        didSet {
+            icon.tintColor = deselectedColor
+        }
+    }
     override var isSelected: Bool {
         didSet {
-            icon.tintColor = isSelected ? .red : .black
-            title.textColor = isSelected ? .red : .black
+            icon.tintColor = isSelected ? selectedColor : deselectedColor
+            title.textColor = isSelected ? selectedColor : deselectedColor
         }
     }
     override var isHighlighted: Bool {
         didSet {
-            icon.tintColor = isHighlighted ? .red : .black
-            title.textColor = isHighlighted ? .red : .black
+            icon.tintColor = isHighlighted ? selectedColor : deselectedColor
+            title.textColor = isHighlighted ? selectedColor : deselectedColor
         }
     }
 

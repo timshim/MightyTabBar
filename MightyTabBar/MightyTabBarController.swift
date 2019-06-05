@@ -56,6 +56,8 @@ public class MightyTabBarController: UIViewController, UICollectionViewDataSourc
             mightyTabBar.itemCountInRow = itemCountInRow
         }
     }
+    public var selectedColor: UIColor = .red
+    public var deselectedColor: UIColor = .black
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +99,8 @@ public class MightyTabBarController: UIViewController, UICollectionViewDataSourc
         bottomView.heightAnchor.constraint(equalToConstant: view.safeAreaInsets.bottom).isActive = true
 
         mightyTabBar.handleColor = handleColor
+        mightyTabBar.selectedColor = selectedColor
+        mightyTabBar.deselectedColor = deselectedColor
     }
 
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
