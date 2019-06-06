@@ -138,7 +138,7 @@ window?.makeKeyAndVisible()
 ```
 
 ### Badge
-Set a badge count by calling setBadge(count: Int, index: Int). Set count to 0 to hide it.
+Set a badge count by calling setBadge(count: Int, index: Int). Set count to 0 to remove it.
 
 ```
 tabBarController.setBadge(count: 1, index: 0)
