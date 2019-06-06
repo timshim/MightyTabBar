@@ -90,6 +90,7 @@ git clone https://github.com/timshim/MightyTabBar.git
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+### Setup
 This example initializes MightyTabBar in didFinishLaunching method in AppDelegate:
 
 ```
@@ -134,6 +135,13 @@ tabBarController.viewControllers = [vc01, vc02, vc03, vc04, vc05, vc06, vc07, vc
 
 window?.rootViewController = tabBarController
 window?.makeKeyAndVisible()
+```
+
+### Badge
+Set a badge count by calling setBadge(count: Int, index: Int)
+
+```
+tabBarController.setBadge(count: 1, index: 0)
 ```
 
 <!-- CONTRIBUTING -->
