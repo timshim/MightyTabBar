@@ -230,19 +230,19 @@ class MightyTabBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate
             let frameAnimator = UIViewPropertyAnimator(duration: animDuration, curve: .easeInOut) {
                 switch state {
                 case .expanded:
-                    self.frame.origin.y = self.screenHeight - self.maxHeight
-                    self.frame.size.height = self.maxHeight
+                    self.layer.frame.origin.y = self.screenHeight - self.maxHeight
+                    self.layer.frame.size.height = self.maxHeight
                 case .collapsed:
-                    self.frame.origin.y = self.screenHeight - self.minHeight
-                    self.frame.size.height = self.minHeight
+                    self.layer.frame.origin.y = self.screenHeight - self.minHeight
+                    self.layer.frame.size.height = self.minHeight
                 }
             }
-
+            
             frameAnimator.addCompletion { _ in
                 self.isOpen = !self.isOpen
                 self.runningAnimations.removeAll()
             }
-
+            
             frameAnimator.startAnimation()
             runningAnimations.append(frameAnimator)
         }
